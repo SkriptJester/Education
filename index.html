@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wi-Fi Attack Awareness</title>
+    <style>
+        /* Basic Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #0073e6;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #005bb5;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        /* Flexbox layout for video and content */
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 40px;
+        }
+
+        .video, .text-info {
+            flex: 1;
+            margin: 0 15px;
+        }
+
+        .video iframe {
+            width: 100%;
+            height: 315px;
+            border: none;
+        }
+
+        .game-container {
+            text-align: center;
+            padding: 40px;
+            background-color: #eee;
+        }
+
+        footer {
+            background-color: #0073e6;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Wi-Fi Attack Awareness</h1>
+        <p>Understand the dangers of connecting to open Wi-Fi and how to protect yourself</p>
+    </header>
+
+    <nav>
+        <a href="#videos">Videos</a>
+        <a href="#info">Text Information</a>
+        <a href="#games">Games</a>
+    </nav>
+
+    <section id="videos">
+        <h2>Educational Videos</h2>
+        <div class="content">
+            <div class="video">
+                <h3>What are Wi-Fi Attacks?</h3>
+                <iframe src="https://www.youtube.com/embed/your-video-id-here" title="What are Wi-Fi Attacks"></iframe>
+            </div>
+            <div class="video">
+                <h3>How to Stay Safe</h3>
+                <iframe src="https://www.youtube.com/embed/your-video-id-here" title="How to Stay Safe"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="info">
+        <h2>What You Should Know</h2>
+        <div class="content">
+            <div class="text-info">
+                <h3>Understanding Wi-Fi Threats</h3>
+                <p>
+                    Wi-Fi attacks happen when hackers exploit weaknesses in wireless networks, often in public places. 
+                    This section will explain the most common types of attacks, including Man-in-the-Middle, Evil Twin, and more.
+                </p>
+            </div>
+            <div class="text-info">
+                <h3>Tips to Protect Yourself</h3>
+                <p>
+                    Connecting to open Wi-Fi networks can expose your sensitive data to attackers. Learn about the risks 
+                    and how to stay safe by using VPNs, turning off automatic Wi-Fi connections, and checking for secure sites.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="games">
+        <h2>Interactive Learning</h2>
+        <div class="game-container">
+            <h3>Test Your Knowledge: Wi-Fi Safety Quiz</h3>
+            <p>Click below to start the quiz and see how well you understand Wi-Fi threats!</p>
+            <button onclick="startQuiz()">Start Quiz</button>
+            <p id="quizResult"></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>Wi-Fi Attack Awareness | &copy; 2024 All Rights Reserved</p>
+    </footer>
+
+    <script>
+        // Basic quiz interaction - expand with real questions
+        function startQuiz() {
+            let answer = prompt("What is the most common type of Wi-Fi attack? (1. Man-in-the-Middle, 2. Phishing, 3. Malware)");
+            let quizResult = document.getElementById('quizResult');
+            if (answer === "1") {
+                quizResult.textContent = "Correct! Man-in-the-Middle is a common Wi-Fi attack.";
+            } else {
+                quizResult.textContent = "Incorrect! The correct answer is 1. Man-in-the-Middle.";
+            }
+        }
+    </script>
+</body>
+
+</html>
